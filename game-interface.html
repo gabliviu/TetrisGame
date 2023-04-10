@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CAG Tetris</title>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,900;1,400&family=Roboto:wght@400;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="mystyle.css" />
+  </head>
+  <body>
+    <main id="main-container">
+      <div id="main-wrapper" class="game-main-wrapper">
+        <section id="grid-section">
+          <article id="game-grid">
+            <!-- main grid of 21 rows x 10 columns grid will be generated inside this article using JavaScript-->
+          </article>
+          <aside id="info-grid">
+            <div class="mini-grids-wrappers">
+              <h4 class="next-heading">Next</h4>
+              <div class="first-next mini-grid">
+                <!--mini grid of 4 rows x 4 columns for first-next will be generated inside this div using JavaScript -->
+              </div>
+              <div class="second-next mini-grid mt1">
+                <!--mini grid of 4 rows x 4 columns for second-next will be generated inside this div using JavaScript -->
+              </div>
+            </div>
+            <div id="info-wrapper">
+              <div class="current-score-wrapper info-sub">
+                <h4>Score</h4>
+                <p id="score"></p>
+              </div>
+              <div class="rows-wrapper info-sub mt1">
+                <h4>Rows</h4>
+                <p id="rows-count"></p>
+              </div>
+              <div class="level-wrapper info-sub mt1">
+                <h4>Level</h4>
+                <p id="level-count"></p>
+              </div>
+              <div class="high-score-wrapper info-sub mt1">
+                <h4>High Score</h4>
+                <p id="high-score"></p>
+              </div>
+            </div>
+          </aside>
+        </section>
+        <section id="control-section">
+          <div id="direction-controls-wrapper">
+            <button id="rotate-button" class="direction-button">
+              &#x27f3;
+            </button>
+            <div id="left-right-wrapper">
+              <button id="left-button" class="direction-button">L</button>
+              <button id="right-button" class="direction-button">R</button>
+            </div>
+            <button id="down-button" class="direction-button">&#x2193;</button>
+          </div>
+          <div id="other-control-wrapper">
+            <button
+              onclick="window.location.href='index.html'"
+              id="back-button"
+              class="other-button btn-back btn"
+            >
+              Back
+            </button>
+            <button
+              onclick="pauseResume()"
+              id="push-resume-button"
+              class="other-button btn-exit btn"
+            >
+              Pause/ Resume
+            </button>
+            <button
+              onclick="restartGame()"
+              id="start-button"
+              class="other-button btn-go btn"
+            >
+              Start
+            </button>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script src="myscript.js"></script>
+  </body>
+</html>
